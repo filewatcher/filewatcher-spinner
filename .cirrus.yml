@@ -1,4 +1,4 @@
-bundle_cache: &bundle_cache
+unix_bundle_cache: &unix_bundle_cache
   bundle_cache:
     folder: /usr/local/bundle
     fingerprint_script:
@@ -6,13 +6,11 @@ bundle_cache: &bundle_cache
       - ruby -v
       - cat Gemfile
       - cat *.gemspec
-  install_script:
-    - gem install bundler
-    - bundle update
 
 remark_task:
   container:
     image: node
+
   node_modules_cache:
     folder: node_modules
     fingerprint_script:
@@ -31,7 +29,12 @@ remark_task:
 rubocop_task:
   container:
     image: ruby:latest
-  <<: *bundle_cache
+
+  <<: *unix_bundle_cache
+
+  install_script:
+    - gem install bundler
+    - bundle update
 
   lint_script: toys rubocop --format=json --out=rubocop.json
 
@@ -49,9 +52,11 @@ rubocop_task:
 
 test_task:
   name: Test on $CIRRUS_OS
+
   depends_on:
     - remark
     - rubocop
+
   matrix:
     - container:
         matrix:
@@ -60,7 +65,8 @@ test_task:
           image: ruby:2.6
           image: ruby:2.7
           image: jruby:latest
-      <<: *bundle_cache
+      <<: *unix_bundle_cache
+
       install_script:
         ## For `ps`: https://cirrus-ci.com/task/4518391826612224
         - apt-get update && apt-get install -y procps
@@ -69,9 +75,12 @@ test_task:
 
     - osx_instance:
         image: catalina-base
+
       env:
         PATH: "/usr/local/opt/ruby/bin:$PATH"
-      <<: *bundle_cache
+
+      <<: *unix_bundle_cache
+
       install_script:
         - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         - brew install ruby
