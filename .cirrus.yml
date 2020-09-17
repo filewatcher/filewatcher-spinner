@@ -88,8 +88,8 @@ test_task:
         - gem install bundler --force
         - bundle update
 
-  # environment:
-  #   CODECOV_TOKEN: ENCRYPTED[...]
+  environment:
+    CODECOV_TOKEN: ENCRYPTED[55a1cff933ded26988a336bdbd5d8b7a6a8dba54a6207d21edd8346ea1f4cae713654b54e9e64c5365fc8a8f5b2df3f7]
 
   test_script: toys rspec --format=json --out=rspec.json
 
