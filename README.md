@@ -8,7 +8,9 @@
 [![License](https://img.shields.io/github/license/filewatcher/filewatcher-spinner.svg?style=flat-square)](https://github.com/filewatcher/filewatcher-spinner/blob/master/LICENSE.txt)
 [![Gem](https://img.shields.io/gem/v/filewatcher-spinner.svg?style=flat-square)](https://rubygems.org/gems/filewatcher-spinner)
 
-TODO
+An ASCII spinner in console for [Filewatcher](https://github.com/filewatcher/filewatcher).
+
+![Demonstration](https://i.imgur.com/2dzqw8e.gif)
 
 ## Installation
 
@@ -33,9 +35,18 @@ gem install filewatcher-spinner
 ## Usage
 
 ```ruby
-require 'filewatcher/spinner'
+require 'filewatcher'
+require 'filewatcher-spinner'
 
-# TODO
+Filewatcher.new('lib/', spinner: true).watch do |filename, event|
+  # ...
+end
+```
+
+Also you can use it with [CLI](https://github.com/filewatcher/filewatcher-cli):
+
+```sh
+$ filewatcher -p spinner --spinner '**/*'
 ```
 
 ## Development
