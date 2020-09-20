@@ -5,7 +5,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/maintainability/filewatcher/filewatcher-spinner.svg?style=flat-square)](https://codeclimate.com/github/filewatcher/filewatcher-spinner)
 [![Depfu](https://img.shields.io/depfu/filewatcher/filewatcher-spinner?style=flat-square)](https://depfu.com/repos/github/filewatcher/filewatcher-spinner)
 [![Inline docs](https://inch-ci.org/github/filewatcher/filewatcher-spinner.svg?branch=master)](https://inch-ci.org/github/filewatcher/filewatcher-spinner)
-[![License](https://img.shields.io/github/license/filewatcher/filewatcher-spinner.svg?style=flat-square)](https://github.com/filewatcher/filewatcher-spinner/blob/master/LICENSE.txt)
+[![License](https://img.shields.io/github/license/filewatcher/filewatcher-spinner.svg?style=flat-square)](LICENSE.txt)
 [![Gem](https://img.shields.io/gem/v/filewatcher-spinner.svg?style=flat-square)](https://rubygems.org/gems/filewatcher-spinner)
 
 An ASCII spinner in console for [Filewatcher](https://github.com/filewatcher/filewatcher).
