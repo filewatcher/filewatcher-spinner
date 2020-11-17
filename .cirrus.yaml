@@ -70,6 +70,8 @@ test_task:
       install_script:
         ## For `ps`: https://cirrus-ci.com/task/4518391826612224
         - apt-get update && apt-get install -y procps
+        ## For `git`: https://cirrus-ci.com/task/6158820244193280?command=test#L14
+        - apt-get install -y git
         - gem install bundler
         - bundle update
 
