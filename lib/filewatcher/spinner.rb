@@ -6,6 +6,14 @@ require_relative 'spinner/version'
 class Filewatcher
   ## Module for the `spinner` option
   module Spinner
+    module ClassMethods
+      def print_version
+        super if defined? super
+
+        puts "Filewatcher Spinner #{Filewatcher::Spinner::VERSION}"
+      end
+    end
+
     private
 
     def after_initialize(unexpanded_filenames, options)
@@ -53,6 +61,7 @@ class Filewatcher
   end
 
   include Spinner
+  extend Spinner::ClassMethods
 end
 
 if Filewatcher.const_defined?(:CLI, false)
