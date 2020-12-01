@@ -6,6 +6,7 @@ require_relative 'spinner/version'
 class Filewatcher
   ## Module for the `spinner` option
   module Spinner
+    ## Class methods with which `Filewatcher` will be extended below
     module ClassMethods
       def print_version
         super if defined? super
