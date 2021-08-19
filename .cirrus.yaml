@@ -78,7 +78,7 @@ rubocop_task:
       '**.rb', '**.ru'
     )
 
-test_task:
+task:
   name: Test on $CIRRUS_OS
 
   depends_on:
