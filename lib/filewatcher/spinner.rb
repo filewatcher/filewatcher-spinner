@@ -24,32 +24,32 @@ class Filewatcher
     end
 
     def before_pause_sleep
-      super
+      super if defined? super
       update_spinner('Paused')
     end
 
     def before_resume_sleep
-      super
+      super if defined? super
       update_spinner('Resumed')
     end
 
     def after_stop
-      super
+      super if defined? super
       update_spinner('Stopped')
     end
 
     def finalizing
-      super
+      super if defined? super
       update_spinner('Finalizing')
     end
 
     def before_pausing_sleep
-      super
+      super if defined? super
       update_spinner('Pausing')
     end
 
     def before_watching_sleep
-      super
+      super if defined? super
       update_spinner('Watching')
     end
 
