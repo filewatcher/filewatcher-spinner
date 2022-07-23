@@ -166,12 +166,6 @@ task:
 
           - gem install bundler
 
-          ## For `pry-byebug`:
-          ## https://cirrus-ci.com/task/5906822973358080?logs=bundle_install#L15
-          ## I didn't find how to install without dialog, so I'm going to just disable
-          ## this dependency for Windows as well as for JRuby.
-          # - ridk install
-
       bundle_cache:
         folder: vendor\bundle
         fingerprint_script:
