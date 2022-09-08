@@ -46,7 +46,7 @@ end
 Also you can use it with [CLI](https://github.com/filewatcher/filewatcher-cli):
 
 ```sh
-$ filewatcher -p spinner --spinner '**/*'
+$ filewatcher -p spinner '**/*'
 ```
 
 ## Development

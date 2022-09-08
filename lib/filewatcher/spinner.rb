@@ -66,5 +66,5 @@ class Filewatcher
 end
 
 if Filewatcher.const_defined?(:CLI, false)
-  Filewatcher::CLI::Command.option %w[-s --spinner], :flag, 'show an ASCII spinner', default: false
+  Filewatcher::CLI::Command.option %w[-s --spinner], :flag, 'show an ASCII spinner', default: true
 end
