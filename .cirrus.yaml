@@ -130,10 +130,11 @@ task:
         CODECOV_OS: linux
 
       os_prepare_script:
-        ## For `ps`: https://cirrus-ci.com/task/4518391826612224
         ## For `gem install`: https://github.com/graalvm/container/issues/9
-        - dnf install -y glibc-langpack-en procps
-        - gem install bundler
+        - dnf install -y glibc-langpack-en
+
+        - gem update --system --no-document
+        - gem install bundler --no-document
 
       <<: *unix_bundle_cache
 
