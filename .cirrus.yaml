@@ -106,10 +106,8 @@ task:
         CODECOV_OS: linux
 
       os_prepare_script:
-        ## For `ps`: https://cirrus-ci.com/task/4518391826612224
-        - apt-get update && apt-get install -y procps
-        - gem install bundler
-        - bundle update
+        - gem update --system --no-document
+        - gem install bundler --no-document
 
       <<: *unix_bundle_cache
 
