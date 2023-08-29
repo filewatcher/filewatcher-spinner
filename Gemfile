@@ -27,7 +27,7 @@ group :test do
   ## Don't update to 0.22 until TruffleRuby is 23:
   ## https://github.com/oracle/truffleruby/milestone/32
   ## https://github.com/oracle/truffleruby/issues/2813
-  gem 'simplecov', '~> 0.21.0'
+  gem 'simplecov', '~> 0.22.0'
   gem 'simplecov-cobertura', '~> 2.1'
 end
 
