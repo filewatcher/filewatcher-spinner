@@ -27,7 +27,7 @@ group :test do
   ## https://github.com/oracle/truffleruby/milestone/32
   ## https://github.com/oracle/truffleruby/issues/2813
   gem 'simplecov', '~> 0.22.0'
-  gem 'simplecov-cobertura', '~> 2.1'
+  gem 'simplecov-cobertura', '~> 3.1'
 end
 
 group :lint do
